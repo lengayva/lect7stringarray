@@ -7,68 +7,67 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
     @Test
-    public void testSum(){
-        StatsService service = new StatsService();//сумма всех продаж
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};//создаём массив
+    public void testSum() {
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        long actual = service.sum(sales);//действительный рез у сервиса вызываем метод sum и передаём туда массив
-        long expected = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18;//ожидаемый
+        long actual = service.sum(sales);
+        long expected = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18;
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void testAverage(){//средняя сумма продаж в месяц
+    public void testAverage() {
         StatsService service = new StatsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};//создаём массив
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        long actual = service.average(sales);//действительный рез у сервиса вызываем метод и передаём туда массив
-        long expected = (8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18) / 12;//ожидаемый
+        long actual = service.average(sales);
+        long expected = (8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18) / 12;
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void testMaxMonth(){
+    public void testMaxMonth() {
         StatsService service = new StatsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};//создаём массив
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        long actual = service.maxMonth(sales);//действительный рез у сервиса вызываем метод и передаём туда массив
-        long expected = 8;//ожидаемый
+        long actual = service.maxMonth(sales);
+        long expected = 8;
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void testMinMonth(){
+    public void testMinMonth() {
         StatsService service = new StatsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};//создаём массив
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        long actual = service.minMonth(sales);//действительный рез у сервиса вызываем метод и передаём туда массив
-        long expected = 9;//ожидаемый
+        long actual = service.minMonth(sales);
+        long expected = 9;
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void testBellowAverage(){
+    public void testBellowAverage() {
         StatsService service = new StatsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};//создаём массив
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        long actual = service.monthBellowAverage(sales);//действительный рез у сервиса вызываем метод и передаём туда массив
-        long expected = 5;//ожидаемый
+        long actual = service.monthBellowAverage(sales);
+        long expected = 5;
 
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
-    public void testAboveAverage(){
+    public void testAboveAverage() {
         StatsService service = new StatsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};//создаём массив
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        long actual = service.monthAboveAverage(sales);//действительный рез у сервиса вызываем метод и передаём туда массив
-        long expected = 5;//ожидаемый
-
+        long actual = service.monthAboveAverage(sales);
+        long expected = 5;
         Assertions.assertEquals(expected, actual);
     }
 
